@@ -1,0 +1,7 @@
+# docker run --name some-mongo -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=password -d mongo
+mongo = "mongodb://root:password@localhost:27017"
+listen = "127.0.0.1:8080"
+database = "test"
+
+[post]
+collection = "post"

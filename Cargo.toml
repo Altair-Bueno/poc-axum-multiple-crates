@@ -1,0 +1,42 @@
+[package]
+name = "poc-axum-multiple-crates"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = ["crates/*"]
+resolver = "2"
+
+[workspace.dependencies]
+config = { path = "crates/config" }
+model = { path = "crates/model" }
+routes = { path = "crates/routes" }
+service = { path = "crates/service" }
+
+axum = { version = "0.6.12", features = ["macros"] }
+serde = { version = "1.0.159", features = ["derive"] }
+tokio = { version = "1.27.0", features = ["full"] }
+async-trait = "0.1.68"
+figment = { version = "0.10.8", features = ["toml", "env"] }
+mongodb = "2.4.0"
+axum-server = "0.4.7"
+eyre = "0.6.8"
+color-eyre = "0.6.2"
+tracing = "0.1.37"
+tracing-subscriber = "0.3.16"
+axum-extra = "0.7.2"
+futures = "0.3.28"
+thiserror = "1.0.40"
+
+[dependencies]
+service.workspace = true
+routes.workspace = true
+mongodb.workspace = true
+config.workspace = true
+
+tokio.workspace = true
+axum-server.workspace = true
+eyre.workspace = true
+color-eyre.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true

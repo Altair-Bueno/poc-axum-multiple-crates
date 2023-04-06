@@ -1,0 +1,13 @@
+[package]
+name = "routes"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+service.workspace = true
+model.workspace = true
+axum.workspace = true
+axum-extra.workspace = true
+serde.workspace = true
